@@ -1,0 +1,17 @@
+# Data locations, relative to the repository root. Point these at local copies of the public releases.
+raw_root: data/raw/aalborg
+preprocessed_dir: Preprocessed/Preprocessed
+processed_dir: Processed/Processed
+channel_list: channel_list.mat
+processed_root: data/processed
+derived_root: data/derived
+results_root: results
+mne_data: data/derived/mne_data
+datasets:
+  broderick: data/raw/broderick
+  speech_in_noise: data/raw/speech_in_noise
+  cocktail_party: data/raw/cocktail_party
+  alice: data/raw/alice
+  cantisong: data/raw/cantisong
+  meg_attention: data/raw/meg_attention
+  meg_masc: data/raw/meg_masc

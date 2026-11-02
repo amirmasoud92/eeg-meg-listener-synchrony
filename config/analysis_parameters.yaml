@@ -1,0 +1,141 @@
+# Parameters of the analyses reported in the paper.
+project: {seed: 20260925}
+dataset:
+  subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 19, 22]
+  conditions: [MC, MD, MF, SD, SF]
+  processed_files: {MC: Data_Music_Cello.mat, MD: Data_Music_Danish.mat, MF: Data_Music_Finnish.mat, SD: Data_Speech_Danish.mat,
+    SF: Data_Speech_Finnish.mat}
+  preprocessed_sfreq: 512.0
+  processed_sfreq: 128.0
+preprocessing:
+  connectivity_epoch_s: 2.0
+  spectral_epoch_s: 4.0
+  epoch_rejection: faster
+  faster_z: 3.0
+  channel_robust_z: 5.0
+  max_bad_epoch_fraction: 0.3333333333
+  min_trials_per_condition: 3
+  analysis_window_s: [3.0, 70.0]
+source_model: {montage: colin27_1005, mindist_mm: 5.0, eloreta_lambda2: 1.0, eloreta_loose: 0.2, eloreta_depth: null, lcmv_reg: 0.05,
+  lcmv_weight_norm: unit-noise-gain, lcmv_pick_ori: max-power, rank_tol: 1.0e-06}
+network_features:
+  bands:
+    delta:
+      range: [0.5, 4.0]
+      closed: false
+    theta:
+      range: [4.0, 8.0]
+      closed: false
+    alpha:
+      range: [8.0, 12.0]
+      closed: true
+    beta:
+      range: [13.0, 30.0]
+      closed: true
+  spectral_bands:
+    delta:
+      range: [1.0, 4.0]
+      closed: false
+    theta:
+      range: [4.0, 8.0]
+      closed: false
+    alpha:
+      range: [8.0, 12.0]
+      closed: true
+    beta:
+      range: [13.0, 30.0]
+      closed: true
+  specparam:
+    freq_range: [1.0, 40.0]
+    peak_width_limits: [1.0, 8.0]
+    max_n_peaks: 8
+    min_peak_height: 0.1
+    peak_threshold: 2.0
+    aperiodic_mode: fixed
+  filter_pad_s: 3.0
+  n_bootstraps: 200
+  min_specparam_r2: 0.9
+geometry:
+  sesoi_dz: 0.611
+  acoustic_covariates: {pca_variance: 0.95, welch_window_s: 8.0}
+  alignment_max_splits: 200
+  n_jobs: 9
+  representations:
+  - name: net_delta_theta
+    summarised: true
+    bands: [delta, theta]
+    cross_decode: true
+  - name: net_delta
+    summarised: true
+    bands: [delta]
+    jackknife: true
+  - name: net_theta
+    summarised: true
+    bands: [theta]
+    jackknife: true
+  - name: net_alpha
+    summarised: true
+    bands: [alpha]
+    jackknife: true
+  - name: net_beta
+    summarised: true
+    bands: [beta]
+    jackknife: true
+  - name: net_all
+    summarised: true
+    bands: [delta, theta, alpha, beta]
+  - name: full_delta_theta
+    summarised: false
+    bands: [delta, theta]
+  - name: full_delta
+    summarised: false
+    bands: [delta]
+  - name: full_theta
+    summarised: false
+    bands: [theta]
+  - name: full_alpha
+    summarised: false
+    bands: [alpha]
+  - name: full_beta
+    summarised: false
+    bands: [beta]
+  - name: full_all
+    summarised: false
+    bands: [delta, theta, alpha, beta]
+  - name: net_delta_theta_no_aperiodic
+    summarised: true
+    bands: [delta, theta]
+    drop_aperiodic: true
+  - name: net_delta_theta_acoustic_adjusted
+    summarised: true
+    bands: [delta, theta]
+    acoustic_adjusted: true
+  - name: net_delta_theta_frontal_delta_covariate
+    summarised: true
+    bands: [delta, theta]
+    covariate: frontal_delta
+  - name: net_delta_theta_without_IFG_RMFG
+    summarised: true
+    bands: [delta, theta]
+    exclude_regions: [IFG, RMFG]
+varx:
+  sfreq: 100.0
+  window_s: [5.0, 65.0]
+  prep_pad_s: 3.0
+  envelope_pad_s: 10.0
+  input_lag_max_ms: 500
+  lambda: 0.3
+  na_max: 40
+  order_maxlag: 51
+  order_group_size: 5
+  n_bootstraps: 200
+  n_crossfit_splits: 10
+  h2_representation:
+    bands: [delta, theta]
+    summarised: true
+    features: [dwpli, aec, logpower]
+  h2b_edges:
+  - [IFG_lh, STG_lh]
+  - [PreCG_lh, STG_lh]
+  - [IFG_rh, STG_rh]
+  - [PreCG_rh, STG_rh]

@@ -1,0 +1,15 @@
+# Versions used for the analyses in the paper (Python 3.11).
+numpy==2.4.6
+scipy==1.17.1
+pandas==3.0.6
+scikit-learn==1.9.1
+statsmodels==0.15.0
+joblib==1.6.0
+mne==1.13.2
+specparam==2.0.0rc7
+h5py==3.16.0
+PyYAML==6.0.3
+torch==2.14.0
+transformers==5.18.0
+num2words==0.5.14
+jiwer==4.0.0

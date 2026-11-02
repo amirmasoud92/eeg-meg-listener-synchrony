@@ -1,0 +1,42 @@
+# Etard and Reichenbach (2019): parameters of the network-state analysis and the speech envelope.
+dataset:
+  root: data/raw/etard
+  snr_db: {clean: null, lb: 0.4, mb: -1.4, hb: -3.2}
+envelope: {audio_lowpass_hz: 3500, audio_transition_hz: 1000, intermediate_sfreq: 8000, compression: 0.6}
+network:
+  participants: [YH07, YH08, YH09, YH10, YH11, YH14, YH15, YH16, YH17, YH18, YH19, YH20]
+  sessions:
+    EN: [clean, lb, mb, hb]
+    NL: [cleanDutch, lbDutch, mbDutch, hbDutch]
+  sfreq: 250
+  lowpass: {edge_hz: 45.0, transition_hz: 5.0}
+  highpass: {edge_hz: 0.5, transition_hz: 0.5}
+  detrend_order: 3
+  detrend_threshold_sd: 3.0
+  window_start_s: 5.0
+  window_end_trim_s: 2.0
+  pad_s: 3.0
+  english_margin_s: [1.0, 3.0]
+  bad_channel_robust_z: 5.0
+  ica:
+    method: infomax
+    extended: true
+    fit_highpass_hz: 1.0
+    fit_sfreq: 125
+    eog_proxies: [Fp1, Fp2, AF7, AF8]
+    eog_z: 3.0
+    max_components: 3
+  ica_scope: session
+  rejection_scope: session
+  min_parts_per_condition: 3
+  representation: net_delta_theta
+  source: eloreta
+  contrast:
+    EN: [lb, hb]
+    NL: [lbDutch, hbDutch]
+  graded_comprehension_change:
+    EN: {clean: 100, lb: 81, mb: 60, hb: 34}
+    NL: {cleanDutch: 0, lbDutch: 0, mbDutch: 0, hbDutch: 0}
+  acoustic_envelope_sfreq: 128
+  seed: 20260926
+  sensitivity_ratio: 1.097

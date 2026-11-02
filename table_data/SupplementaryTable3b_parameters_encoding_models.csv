@@ -1,0 +1,7 @@
+Parameter,Value
+Band,1–8 Hz (word level); 1–4 Hz (removal before ISC)
+Lags,"0–688 ms (word level), 0–594 ms (removal), 31-ms steps"
+Regressors,"band-passed like the EEG, z-scored per trial"
+Ridge,decade grid chosen by held-out accuracy on the model without the tested regressor (word level); grid including no removal (removal)
+Cross-validation,"leave one song, segment or run out"
+Language models,"GPT-2 small (English), GerPT2 (German); GPT-2 medium and GerPT2-large as sensitivity checks"

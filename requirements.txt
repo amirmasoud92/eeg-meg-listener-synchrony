@@ -9,6 +9,9 @@ mne==1.13.2
 specparam==2.0.0rc7
 h5py==3.16.0
 PyYAML==6.0.3
+matplotlib==3.11.2
+Pillow==12.3.0
+pypdf==6.19.0
 torch==2.14.0
 transformers==5.18.0
 num2words==0.5.14

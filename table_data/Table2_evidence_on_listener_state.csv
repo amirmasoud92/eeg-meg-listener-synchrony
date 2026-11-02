@@ -1,0 +1,8 @@
+Test,State manipulated or measured (time scale),Unit (n),dz [95% CI],BF01,BF0+,"TOST ±0.5, p",TOST at the 80%-power bound
+Seeing the talker,"Rated words understood, 28% → 63%, with a visual input added (60-s passages)",Passages (15),"−0.37 [−0.88, 0.16]",1.66,8.05,.305,0.68: p = .125
+Attending one story,Which of two stories in one mixture was attended and understood (whole session),Runs (30),"−0.15 [−0.51, 0.21]",3.81,8.60,.032,0.46: p = .046
+Envelope responses removed,"As above, after removing the responses to both stories’ envelopes",Runs (30),"−0.20 [−0.56, 0.16]",2.9,10.0,–,–
+Run-wise comprehension,Comprehension of the attended story in one-minute runs,Listeners (33),"−0.01 [−0.35, 0.33]",5.36,5.60,.0041,0.44: p = .0092
+Rated engagement,Engagement ratings of 70-s trials,Listeners (18),"−0.13 [−0.59, 0.34]",3.59,5.91,.068,0.61: p = .029
+Posterior α state,Relative posterior α power in one-minute segments,Listeners (48),"−0.07 [−0.35, 0.21]",5.70,8.94,.0023,0.36: p = .024
+"Pooled, one test per dataset (descriptive)","Seeing the talker, run-wise comprehension, engagement and α; fixed effect",–,"−0.10 [−0.28, 0.09]",–,–,–,–

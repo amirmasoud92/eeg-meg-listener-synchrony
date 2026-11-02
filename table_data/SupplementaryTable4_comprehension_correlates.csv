@@ -1,0 +1,13 @@
+Dataset,Statistic,n,Estimate [95% CI],p
+MEG attention,"ρ(comprehension, synchrony)",57,"−0.13 [−0.39, 0.14]",.835 (one-sided)
+MEG attention,"ρ(comprehension, word-level Δr, attended talker)",57,"0.06 [−0.21, 0.32]",.326 (one-sided)
+MEG attention,Δρ = ρ(synchrony) − ρ(word level),57,"−0.19 [−0.54, 0.17]",.847
+Alice,"ρ(comprehension, word-level Δr): original; up to 500 permutations",47,"0.06 [−0.23, 0.34]; 0.03 [−0.26, 0.32]",.352 (original)
+Alice,Δρ = ρ(synchrony) − ρ(word level): original; up to 500 permutations,47,"0.43 [0.12, 0.74]; 0.46 [0.15, 0.77]",–
+Alice,split-half reliability of word-level Δr: original; up to 500 permutations,–,0.54; 0.59,–
+Alice,"ρ(comprehension, word-level Δr) corrected for that reliability: original; up to 500 permutations",47,about 0.08; 0.04,–
+Pooled,"ρ(comprehension, synchrony), Alice + MEG",104,"0.17 [−0.04, 0.36]",–
+Pooled,"Δρ, original Alice word-level estimate",104,"0.16 [−0.07, 0.40]",.087 (one-sided)
+Pooled,"Δρ, Alice word-level estimate with up to 500 permutations (Fig. 4d)",104,"0.19 [−0.05, 0.42]",.060 (one-sided)
+MEG attention,"ρ(attended-talker envelope tracking, comprehension)",57,0.37,.0049 (two-sided)
+MEG attention,"ρ(attended-talker envelope tracking, synchrony)",57,0.31,.020 (two-sided)

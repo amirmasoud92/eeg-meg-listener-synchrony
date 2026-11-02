@@ -1,0 +1,11 @@
+Dataset,Listeners,Stimuli and contrast,Synchrony analyses
+"Aalborg songs and speech (Simon et al., 2024)",18 Danish (22 recorded),"5 × 70 s each of Danish songs, Finnish songs, Danish and Finnish audiobooks and cello instrumentals; 64 channels",Understood vs foreign song; engagement; stability within a session; generality across kinds of sound; network states (Supplementary Note 1)
+Etard and Reichenbach (2019),11 English (12 recorded),English and Dutch stories in quiet and at three babble levels,Within-session replication of the network-state test (Supplementary Note 1)
+"Broderick et al. (2018), natural speech",19,20 runs of an audiobook (about 3 min each); 128 channels,Fitting the speech-defined space; intact vs reversed speech
+"Broderick et al. (2018), time-reversed speech",10,The same audio time-reversed,Intact vs reversed speech
+"Speech in noise (Crosse et al., 2016)",21,"15 passages of 60 s at −9 dB SNR: audio only, video only, audiovisual; intelligibility ratings",Seeing the talker
+"Cocktail party (O’Sullivan et al., 2015)",33,"30 runs of 60 s: a dichotic mixture of two stories, one attended; comprehension scores",Selective attention; run-wise comprehension
+"Alice (Brennan & Hale, 2019)",48 (49 recorded),12.4-min audiobook chapter in 12 segments; 61 channels; 8-item comprehension quiz,Comprehension across listeners; α state; stability within a session
+"CantiSong (Cantisani et al., 2023, 2024)",20 English,"18 songs, each spoken, sung and hummed on the sung timeline; 64 channels",Sung vs hummed synchrony; generality across kinds of sound
+"Two audiobooks, one attended: MEG (Riegel et al., 2024; Schüller et al., 2023, 2025)",58,"10 chapters (about 37 min) of two German audiobooks played at once, one attended; 248 magnetometers; 30 comprehension questions",Comprehension across listeners
+"MEG-MASC (Gwilliams et al., 2023)",27 (22 in two sessions),"Four English stories (synthesised voices) with interleaved word lists, heard in two identical sessions; 208 axial gradiometers",Stability across days; sentences vs word lists

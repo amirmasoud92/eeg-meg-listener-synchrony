@@ -1,0 +1,6 @@
+Parameter,Value,Robustness checks (result)
+Band,"1–4 Hz, chosen in exploratory analyses of the Aalborg and Etard data (δ strongest; θ null)","0.5–4 and 1–3 Hz for intact vs reversed speech, the song contrasts and seeing the talker (the last null throughout); 1–8 Hz for comprehension in Alice (all pFWE ≤ .009); song: Supplementary Note 4"
+Components,"3, summed (Parra et al., 2019)","1, 3 or 5 for seeing the talker, song and comprehension in Alice (comprehension: all significant)"
+Shrinkage of Rw,0.5 toward the mean eigenvalue,–
+Space,"fixed speech-defined space (Broderick datasets and Aalborg) or leave-one-out within dataset (CantiSong, Alice, MEG datasets)",attention: a space fitted within the dataset gave the same null (Supplementary Note 3)
+Unequal groups,"subsampling to equal size (intact vs reversed, 200 subsets; attention, 100)",–

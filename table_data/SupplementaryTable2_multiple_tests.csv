@@ -1,0 +1,33 @@
+Label,Question,p,p (Holm),p (BH),Survives,Reported here
+H1,understood lyrics → speech-like network states,.716,1.000,.818,neither,yes
+H1b,alignment of comprehension axes,.069,1.000,.138,neither,yes
+H2,"capture index, intrinsic dynamics",.350,1.000,.512,neither,yes
+H2b,fronto-temporal Granger influence,.349,1.000,.512,neither,yes
+HR1,network-state replication (Etard),.979,1.000,.979,neither,yes
+A,forward > reversed speech ISC,< .0001,< .0001,< .0001,Holm and FDR,yes
+B,understood > foreign song ISC,.021,.401,.048,FDR only,yes
+C,"sung > hummed ISC, speech- vs melody-space",.111,1.000,.188,neither,yes
+D,audiovisual superadditivity of ISC,.911,1.000,.940,neither,yes
+E1,same- > other-story ISC,.785,1.000,.866,neither,yes
+E2,run-wise comprehension → ISC,.521,1.000,.667,neither,yes
+F1,forward > reversed after acoustic removal,< .0001,< .0001,< .0001,Holm and FDR,yes
+G1,"word predictability, spoken lyrics",.0005,.012,.0017,Holm and FDR,no
+G2,"word predictability, sung lyrics",.0035,.074,.0094,FDR only,no
+G2b,sung > hummed (listeners),.074,1.000,.139,neither,no
+TH1,"word predictability, Alice speech",.0001,.0027,.0005,Holm and FDR,no
+TH2,"ρ(comprehension, word-level Δr)",.352,1.000,.512,neither,comparison
+TH3a,"ρ(comprehension, ISC)",.0005,.012,.0017,Holm and FDR,yes
+I1,rated engagement → ISC,.707,1.000,.818,neither,yes
+I3,α state → ISC,.681,1.000,.818,neither,yes
+J1,synchrony stable across kinds of sound (pooled),.031,.553,.066,neither,yes
+K1,"ρ(comprehension, ISC beyond acoustics)",.0005,.012,.0017,Holm and FDR,yes
+L1_sung,"melodic surprisal, sung",< .0001,.0011,.0003,Holm and FDR,no
+L1_hummed,"melodic surprisal, hummed",.0028,.061,.0081,FDR only,no
+L2,melodic surprise reduces lexical prediction,.419,1.000,.582,neither,no
+M1_spoken,"GPT-2 representations, spoken",.0018,.041,.0057,Holm and FDR,no
+M1_sung,"GPT-2 representations, sung",.0079,.158,.019,FDR only,no
+2b,"word predictability, audiovisual − audio-only (speech in noise)",.443,1.000,.591,neither,comparison
+A (MEG attention),"word predictability, attended − ignored talker",< .0001,.0006,.0002,Holm and FDR,comparison
+B (MEG attention),"Δρ = ρ(comprehension, synchrony) − ρ(comprehension, word-level Δr)",.847,1.000,.903,neither,yes
+1 (MEG-MASC),"synchrony stable across days, ρ(session 1, session 2)",< .0001,.0014,.0003,Holm and FDR,yes
+2 (MEG-MASC),"word predictability, matched sentence occurrences − list words",.096,1.000,.171,neither,no

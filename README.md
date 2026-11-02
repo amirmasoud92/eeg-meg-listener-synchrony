@@ -1,10 +1,10 @@
 # Electrophysiological synchrony between listeners
 
-Analysis code for the article *Electrophysiological synchrony between listeners reflects the stimulus and stable individual differences more than momentary understanding*.
+Analysis code, figure code and figure data for the article *Electrophysiological synchrony between listeners reflects the stimulus and stable individual differences more than momentary understanding*.
 
-Neural synchrony, the similarity of brain activity across people exposed to the same material, is widely used as a model-free index of shared processing. The article estimates what low-frequency synchrony (δ band, 1–4 Hz) between listeners reflects, using ten public EEG and MEG datasets in which the auditory input, the listener's state or the listener were varied while everything else was held fixed. This repository contains the implementation of the methods reported in the article: preprocessing, correlated components analysis, encoding and decoding models, source-space network measures and the statistical tests.
+Neural synchrony, the similarity of brain activity across people exposed to the same material, is widely used as a model-free index of shared processing. The article estimates what low-frequency synchrony (δ band, 1–4 Hz) between listeners reflects, using ten public EEG and MEG datasets in which the auditory input, the listener's state or the listener were varied while everything else was held fixed. This repository contains the implementation of the methods reported in the article, the code that draws its figures, the data plotted in those figures and the tables of the article.
 
-The repository does not contain data or results, and it is organised by method rather than as a pipeline to be run from start to finish.
+The recordings themselves are not included. The analysis code is organised by method rather than as a pipeline to be run from start to finish.
 
 ## Publication
 
@@ -39,6 +39,9 @@ All recordings are publicly available from their original sources and are not re
 | `decoding/` | Forward and backward models of selective attention |
 | `network_states/` | Template source model, connectivity and spectral features, cross-validated representational geometry, VARX decomposition and the specification search |
 | `statistical_tests/` | Permutation and sign-flip tests, effect-size intervals, equivalence tests, Bayes factors, multiplicity corrections and variance components |
+| `figures/` | Code that draws Figures 1–6 and Supplementary Figures 1–5 |
+| `figure_data/` | The values plotted in the figures (CSV and JSON) and the display data of the illustrative panels (`illustrations.npz`) |
+| `table_data/` | Tables 1 and 2 and Supplementary Tables 1–4 of the article, as CSV files |
 
 ## Methods and their implementation
 
@@ -66,9 +69,31 @@ All recordings are publicly available from their original sources and are not re
 | Sign-flip tests, noncentral-t intervals for d<sub>z</sub>, equivalence tests, JZS Bayes factors, Freedman-Lane partial correlations, Holm and Benjamini-Hochberg corrections, inverse-variance pooling | `statistical_tests/inference.py`, `statistical_tests/one_sided_bayes_factors.R` |
 | Evidence for absence and intraclass correlations from crossed mixed models | `statistical_tests/evidence_for_absence.py` |
 
+## Figures and tables
+
+All figures of the article are drawn from the files in `figure_data/`, which hold the values the figures show: listener- and item-level estimates, test statistics, intervals and the display data of the illustrative panels. No recordings are needed. The cortical maps use the fsaverage template from MNE-Python:
+
+```python
+import mne
+mne.datasets.fetch_fsaverage(subjects_dir="data/derived/mne_data")
+```
+
+Then, from the repository root:
+
+```
+python -m figures.make_figures            # all figures
+python -m figures.make_figures 2 S4       # selected figures
+```
+
+The figures are written to `figure_output/` as PDF and PNG. Final typographic adjustments to the published figures were made in a vector editor.
+
+The illustrative panels of Figures 1 and 6 (the CantiSong components) and the MEG sensor layout of Figure 4 come from `figure_data/illustrations.npz`, which `figures/illustration_data.py` computes from the preprocessed CantiSong recordings and the header of one MEG recording.
+
+`table_data/` contains Tables 1 and 2 and Supplementary Tables 1–4 as they appear in the article.
+
 ## Requirements
 
-- Python 3.11 with the packages listed in `requirements.txt` (NumPy, SciPy, pandas, scikit-learn, statsmodels, MNE-Python, specparam, PyTorch, Transformers).
+- Python 3.11 with the packages listed in `requirements.txt` (NumPy, SciPy, pandas, scikit-learn, statsmodels, MNE-Python, specparam, PyTorch, Transformers, Matplotlib).
 - R 4.4.2 with lme4 1.1-37, lmerTest 3.1-3, BayesFactor 0.9.12-4.7 and jsonlite, for the mixed models and Bayes factors.
 - Montreal Forced Aligner 3.4.2 with the pretrained German acoustic model, dictionary and grapheme-to-phoneme model, for the word timings of the MEG attention dataset.
 
@@ -119,7 +144,7 @@ The VARX model is a Python port of the MATLAB toolbox by Parra et al. (2025), [g
 
 ## Licence
 
-No licence has been granted yet. Until one is added, all rights are reserved; please contact the author about reuse.
+The code and the files in `figure_data/` and `table_data/` are released under the MIT Licence (see `LICENSE`). The values in `figure_data/` are derived from the public datasets listed above, which remain under the licences of their original releases.
 
 ## Contact
 

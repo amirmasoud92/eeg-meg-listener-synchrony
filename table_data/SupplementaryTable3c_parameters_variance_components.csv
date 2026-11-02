@@ -1,0 +1,4 @@
+Dataset,Model
+Alice,isc ~ 1 + (1|listener) + (1|segment)
+Aalborg,isc ~ condition + (1|subject) + (1|stimulus)
+MEG-MASC,isc ~ 1 + (1|listener) + (1|listener:session) + (1|segment)

@@ -1,6 +1,6 @@
 # Electrophysiological synchrony between listeners
 
-Analysis code, figure code and figure data for the article *Electrophysiological synchrony between listeners reflects the stimulus and stable individual differences more than momentary understanding*.
+Analysis code, figure code and figure data for the article *Neural synchrony reflects what listeners hear and who they are more than what they understand*.
 
 Neural synchrony, the similarity of brain activity across people exposed to the same material, is widely used as a model-free index of shared processing. The article estimates what low-frequency synchrony (δ band, 1–4 Hz) between listeners reflects, using ten public EEG and MEG datasets in which the auditory input, the listener's state or the listener were varied while everything else was held fixed. This repository contains the implementation of the methods reported in the article, the code that draws its figures, the data plotted in those figures and the tables of the article.
 
@@ -8,7 +8,7 @@ The recordings themselves are not included. The analysis code is organised by me
 
 ## Publication
 
-*Electrophysiological synchrony between listeners reflects the stimulus and stable individual differences more than momentary understanding.* Citation details will be added on publication.
+*Neural synchrony reflects what listeners hear and who they are more than what they understand.* Citation details will be added on publication.
 
 ## Datasets
 
